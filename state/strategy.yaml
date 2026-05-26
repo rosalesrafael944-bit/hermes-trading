@@ -1,0 +1,19 @@
+﻿version: "01"
+entry:
+  instrument: "SPY"
+  trade_type: "shares_and_options"
+  option_preference: "calls_when_vix_high"
+  vix:
+    buy_min: 19.0
+    buy_max: 25.0
+  markov:
+    lookback_days: 20
+    bull_threshold_pct: 5.0
+    bear_threshold_pct: 5.0
+  vwap_filter: true
+  mrc:
+    length: 20
+    atr_mult: 2.0
+stop_loss_pct: 0.08
+position_size_r: 0.5
+notes: "Start paper mode. Covered calls allowed when position held > 7 days."
